@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Frontend {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  titulo      String
+  link_video  String
+  link_imagem String
+  categorie   String
+  description String?
+}
+
+model Backend {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  titulo      String
+  link_video  String
+  link_imagem String
+  categorie   String
+  description String?
+}
+
+model Mobile {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  titulo      String
+  link_video  String
+  link_imagem String
+  categorie   String
+  description String?
+}
